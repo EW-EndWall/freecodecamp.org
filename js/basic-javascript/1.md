@@ -1,0 +1,4 @@
+// example text
+/**
+ * example text
+ */
