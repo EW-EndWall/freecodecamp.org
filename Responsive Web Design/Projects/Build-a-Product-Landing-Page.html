@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a Product Landing Page</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(189, 189, 189);
+    }
+    header {
+      position: fixed;
+      top: 0;
+      background-color: rgb(209, 209, 209);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      height: auto;
+    }
+    header div {
+      margin: auto 0;
+      text-align: center;
+    }
+    header div img {
+      width: 100%;
+      height: auto;
+      max-width: 15rem;
+    }
+    header nav ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    header nav ul li::marker {
+      content: "";
+    }
+    header nav ul li {
+      margin: 0.5rem 1rem;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #535353;
+    }
+    .container {
+      margin: 3rem;
+      padding: 2rem;
+      background-color: rgb(209, 209, 209);
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    #features,
+    #pricing {
+      display: flex;
+      gap: 1rem;
+      text-align: center;
+    }
+    .group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+    }
+    #how-it-works > iframe {
+      max-width: 50vw;
+      max-height: 15rem;
+    }
+    .product {
+      background-color: rgb(189, 189, 189);
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+    .btn {
+      width: 100%;
+      background-color: rgb(209, 209, 209);
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 0;
+      font-weight: 900;
+      color: #535353;
+    }
+    #subscribe {
+      text-align: center;
+      width: 100%;
+      background-color: rgb(189, 189, 189);
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+    #subscribe #email {
+      display: block;
+      background-color: rgb(209, 209, 209);
+      margin: 1rem auto;
+      border: 0;
+      width: 70%;
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(209, 209, 209);
+      color: #535353;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media only screen and (max-width: 768px) {
+      #features,
+      #pricing {
+        flex-direction: column;
+      }
+      .group {
+        width: 100%;
+      }
+      header div {
+        width: 100%;
+      }
+      header nav ul {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+  <body>
+    <header id="header">
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Soundcloud_logo.svg/220px-Soundcloud_logo.svg.png"
+          alt="logo"
+          id="header-img"
+        />
+      </div>
+      <nav id="nav-bar">
+        <ul>
+          <li>
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#how-it-works">How It Works</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section id="features">
+        <div class="group">
+          <div>
+            <i class="fa fa-3x fa-headphones-simple"></i>
+          </div>
+          <div>
+            <h2>Premium Quality</h2>
+            <p>
+              At our core, we are committed to delivering products/services that
+              embody the essence of premium quality. What sets us apart is our
+              unwavering dedication to excellence in every aspect, from the
+              selection of finest materials to the meticulous craftsmanship
+              applied in each detail.
+            </p>
+          </div>
+        </div>
+        <div class="group">
+          <div>
+            <i class="fa fa-3x fa-compact-disc"></i>
+          </div>
+          <div>
+            <h2>Detailed Sound</h2>
+            <p>
+              Immerse yourself in a world of unparalleled auditory richness with
+              our detailed sound experience. We believe that every note, every
+              tone, and every nuance contributes to the complete tapestry of
+              sound. Our commitment to providing a detailed sound experience
+              means that you don't just hear music; you feel it, with each layer
+              of sound meticulously crafted to offer an immersive and authentic
+              sonic journey.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="how-it-works">
+        <iframe
+          id="video"
+          width="515"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
+          frameborder="0"
+          allowfullscreen=""
+        ></iframe>
+      </section>
+      <section id="pricing">
+        <div class="product">
+          <h1>1 moon subscription</h1>
+          <hr />
+          <h2>$600</h2>
+          <button class="btn">BUY</button>
+        </div>
+        <div class="product">
+          <h1>6 moon subscription</h1>
+          <hr />
+          <h2>$900</h2>
+          <button class="btn">BUY</button>
+        </div>
+        <div class="product">
+          <h1>12 moon subscription</h1>
+          <hr />
+          <h2>$1200</h2>
+          <button class="btn">BUY</button>
+        </div>
+      </section>
+      <section id="subscribe">
+        <h2>Subscribe to be informed about innovations</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input
+            name="email"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            required=""
+          />
+          <input id="submit" type="submit" value="Subscribe" class="btn" />
+        </form>
+      </section>
+    </div>
+    <footer>
+      <span>Copyright 2023</span>
+      <span>all rights reserved.</span>
+    </footer>
+  </body>
+</html>
