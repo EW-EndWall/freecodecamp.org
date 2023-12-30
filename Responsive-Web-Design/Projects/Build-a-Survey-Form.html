@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a Survey Form</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(189, 189, 189);
+      margin: 3rem;
+    }
+    .container {
+      width: 80vw;
+      margin: auto;
+    }
+    .header {
+      text-align: center;
+      margin: 3rem;
+    }
+    form {
+      padding: 2rem;
+      background-color: rgb(209, 209, 209);
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .form-element {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-element label {
+      font-weight: 700;
+    }
+    .form-element input,
+    .form-element select {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 0;
+    }
+    .form-element textarea {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      min-height: 5rem;
+      resize: vertical;
+    }
+    .form-element button {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 id="title">example Survey Form</h1>
+        <p id="description">Thanks for your feedback</p>
+      </div>
+      <form id="survey-form">
+        <div class="form-element">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required=""
+          />
+        </div>
+        <div class="form-element">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your Email"
+            required=""
+          />
+        </div>
+        <div class="form-element">
+          <label id="number-label" for="number">Age</label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="18"
+            max="50"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-element">
+          <label id="membership-status-label" for="membership-status">
+            Membership status
+          </label>
+          <select id="dropdown" name="membership-status" required="">
+            <option disabled="" selected="" value="">
+              Choose your membership
+            </option>
+            <option value="free">Free</option>
+            <option value="premium">Premium</option>
+          </select>
+        </div>
+        <div class="form-element">
+          <label id="user-member-label">How long have you been a member?</label>
+          <label>
+            <input
+              name="user-member"
+              value="12+"
+              type="radio"
+              class="input-radio"
+              checked=""
+            />
+            12+ moon
+          </label>
+          <label>
+            <input
+              name="user-member"
+              value="0-12"
+              type="radio"
+              class="input-radio"
+            />
+            0-12 moon
+          </label>
+        </div>
+        <div class="form-element">
+          <label id="user-member-label">Where did you hear about us?</label>
+          <label>
+            <input
+              name="hear-about"
+              value="social-media"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            Social Media
+          </label>
+          <label>
+            <input
+              name="hear-about"
+              value="email"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            Email
+          </label>
+          <label>
+            <input
+              name="hear-about"
+              value="frends"
+              type="checkbox"
+              class="input-checkbox"
+            />
+            Frends
+          </label>
+        </div>
+        <div class="form-element">
+          <label id="comment-label" for="comment"
+            >Any comments or suggestions?</label
+          >
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <div class="form-element">
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
