@@ -1,0 +1,1 @@
+let yourArray = ['example', 100, true, ['one', 2], 'string']; // Change this line
